@@ -1,14 +1,24 @@
 import React from 'react';
 import Introduction from '../components/Introduction';
 import Slider from '../components/Slider';
-import "../css/home.css"
-import AboutImage from "../images/pexels-pixabay-357743.jpg"
-import delicious from "../images/delicious.jpg"
-import one from "../images/2.jpg"
-import two from "../images/4.jpg"
-import three from "../images/6.jpg"
+import "../css/home.css";
+import AboutImage from "../images/pexels-pixabay-357743.jpg";
+import delicious from "../images/delicious.jpg";
+import one from "../images/2.jpg";
+import two from "../images/4.jpg";
+import three from "../images/6.jpg";
+import Carou from '../components/Carousel';
+import Footer from '../components/Footer';
+import { useState, useRef } from 'react';
+import Button from 'react-bootstrap/Button';
+import Overlay from 'react-bootstrap/Overlay';
+import Tooltip from 'react-bootstrap/Tooltip';
+
 
 function Home() {
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
+  
   return (
     <div className='home'>
       <Introduction />
@@ -66,34 +76,61 @@ function Home() {
             how to clean it, and how to prepare it—with our
             vegetables guides that answer all your burning questions.
           </p>
-          <button type="button">Discover Now..</button>
+          <Button type='button' ref={target} onClick={() => setShow(!show)}>Discover More!</Button>
+          <Overlay target={target.current} show={show} placement="right">
+            {(props) => (
+              <Tooltip id="overlay-example" {...props}>
+                Not yet Updated!...
+              </Tooltip>
+            )}
+          </Overlay>
         </div>
 
       </section>
 
       {/* How it works!! */}
-      {/* <section className="Works">
-        <div className="slant">
-          <label className='one label'>
-            <h1>01</h1>
-            <h4>exquisite</h4>
-            <p>Complete food with great taste about nature!</p>
-            <img id='image' src={one} alt="one.png" />
-          </label>
-          <label className='two label'>
-            <h1>02</h1>
-            <h4>Creative</h4>
-            <p>Complete food with great taste about nature!</p>
-            <img id='image' src={two} alt="two.png" />
-          </label>
-          <label className='three label'>
-            <h1>02</h1>
-            <h4>Digital</h4>
-            <p>Complete food with great taste about nature!</p>
-            <img id='image' src={three} alt="three.png" />
-          </label>
-        </div>
-      </section> */}
+      <section className="Works">
+        <label>
+          <div className="card">
+            <div className="text">
+              <span>01</span>
+              <h4 className="card-text">Great Brief</h4>
+              <p>
+                Complete recipe with simple description about the meal..
+              </p>
+            </div>
+            <img src={one} alt="Brief.png" />
+          </div>
+        </label>
+        <label id='second'>
+          <div className="card">
+            <div className="text">
+              <span>02</span>
+              <h4 className="card-text">Proffesional</h4>
+              <p>
+                Our official chefs, start creating unique recipe.
+              </p>
+            </div>
+            <img src={two} alt="Brief.png" />
+          </div>
+        </label>
+        <label>
+          <div className="card">
+            <div className="text">
+              <span>03</span>
+              <h4 className="card-text">Get your Recipe</h4>
+              <p>
+                Get your meal online or pick it up from us..
+                Wanna eat!
+              </p>
+            </div>
+            <img src={three} alt="Brief.png" />
+          </div>
+        </label>
+      </section>
+      <Carou />
+      <Footer />
+      
     </div>
   );
 }

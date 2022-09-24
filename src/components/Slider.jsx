@@ -53,7 +53,7 @@ const Slider = () => {
         </p>
         <h1>
           GOOD COOKS KNOW HOW. GREAT COOKS KNOW WHY.
-        </h1>
+        </h1>       
        </span>
       </div>
     </div>

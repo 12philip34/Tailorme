@@ -13,7 +13,7 @@ export const SidebarData = [
   },
   {
     title: 'Contact',
-    path: '/contact',
+    path: '/footer',
     icon: <IoIcons.IoMdContact />,
     cName: 'nav-text'
   },

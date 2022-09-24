@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+*{
+    overflow-x: hidden;
+
+}
+
+.h3 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+.caroSection {
+    margin-bottom: 100px;
+}
+
+.caroSection span {
+    padding: 100px 50px;
+}
+
+.caroSection span h1 {
+    font-size: 4rem;
+    font-family: 'Shadows Into Light', cursive;
+    color: #060b26;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .carousel-control-next-icon {
+        display: none;
+    }
+
+}
