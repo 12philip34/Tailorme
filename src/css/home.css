@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+*{
+    /* overflow-x: hidden; */
+}
+
+.about, .deliciousLooks{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+}
+
+.about .aboutText, 
+.deliciousLooks .looksText
+{
+    padding: 30px;
+}
+
+.about .aboutText .rating{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.about .aboutText .rating label{
+    display: flex;
+    flex-direction: column;
+}
+
+.about .aboutText .rating label span{
+    font-size: 20px;
+    font-weight: 600;
+   font-family: 'Shadows Into Light', cursive;
+}
+.about .aboutText .rating label span:first-child{
+    border-bottom: 1px solid #060b26;
+}
+
+
+
+.about .aboutText h1{
+   font-family: 'Shadows Into Light', cursive;
+    color: #060b26;
+}
+
+.about .aboutText p,
+.deliciousLooks .looksText p
+{
+    margin: 30px 0;
+}
+
+.about .aboutImage img{
+ width: 100%;   
+}
+
+
+.deliciousLooks .looksText h1{  
+     font-family: 'Shadows Into Light', cursive;
+}
+
+.deliciousLooks .looksText button{
+    color: #060b26;
+    border: 1px solid #060b26;
+    padding: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    font-style: 10px;
+    font-weight: 500;
+    background: transparent;
+}
+
+.deliciousLooks .looksText button:hover{
+    background: #060b26;
+    color: white;
+}
+
+.deliciousLooks .looksImage{
+    padding: 30px;
+}
+
+.deliciousLooks .looksImage img{
+    width: 100%;
+}
+
+.Works{
+    margin-top: ;
+}
+
+.Works .slant{
+    position: relative;
+    padding: 30px;
+}
+
+.Works .slant .label{
+position: absolute;
+border-left: 1px solid #060b26;
+padding: 50px;
+}
+
+.Works .slant .one{
+    left: 200px;
+
+}
+.Works .slant .two{
+    left: 600px;
+    top: 400px;
+}
+.Works .slant .three{
+    left: 1100px;
+    top: 800px;
+}
+
+
+.Works .slant .label h1{
+    font-size: 4em;
+    font-family: 'Shadows Into Light', cursive;
+
+}
+
+.Works .slant .label h4{
+    font-size: 2em;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.Works .slant .label p{
+    margin: 20px 0;
+}
+
+.Works .slant .label #image{
+    width: 300px !important;
+    height: 300px !important;
+}
+
+
+/* Media query */
+
+@media only screen and (max-width: 425px) {
+    .about, .deliciousLooks{
+        grid-template-columns: 1fr;
+    }
+
+    .about .aboutText .rating label{
+       margin: 20px 0;
+    }
+}
+
+
+@media only screen and (min-width: 2560px) {
+    .about, .deliciousLooks{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about .aboutText .rating label{
+       margin: 20px 0;
+    }
+}

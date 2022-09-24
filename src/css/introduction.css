@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.568)), url(../images/background.jpg);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: serif;
+}
+
+.container .containerBox {
+    padding: 30px;
+}
+
+.container .containerBox h6,
+.container .containerBox h1,
+.container .containerBox button
+{
+    color: whitesmoke;
+}
+
+.container .containerBox h6{
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.container .containerBox h1 {
+   margin: 20px 0;
+   font-size: 3em;
+   font-family: 'Shadows Into Light', cursive;
+}
+
+.container .containerBox button {
+   margin: 20px 0;
+   background-color: transparent;
+   border: 1px solid white;
+   padding: 10px;     
+}
+
+.container .containerBox button:hover{
+    background: #060b26;
+    color: white;
+}
