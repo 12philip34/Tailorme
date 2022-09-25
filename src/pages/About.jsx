@@ -45,7 +45,7 @@ const About = () => {
       <section className="support">
         <label className='absolute'> 
         <i>Exquisite</i>
-        <a rel='noopener noreferrer' href="" target="_blank">Support Us!..</a>
+        <a rel='noopener noreferrer' href="https://www.buymeacoffee.com/nssiphilA" target="_blank">Support Us!..</a>
         </label>
       </section>
       <Footer />
