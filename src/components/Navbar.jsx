@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <div className='navbar'>
+        <div className='navbar sticky-top'>
           <span className='LogoSpan'><h3 className='logos'>C<FaIcons.FaEarlybirds />okies</h3></span>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
