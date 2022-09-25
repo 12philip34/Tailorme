@@ -46,6 +46,7 @@
 .about .aboutText p,
 .deliciousLooks .looksText p {
     margin: 30px 0;
+    font-size: 25px;
 }
 
 .about .aboutImage img {
@@ -117,6 +118,7 @@
 
 .Works label .card .text p {
     margin: 20px 0;
+    font-size: 25px;
     color: rgba(141, 138, 138, 0.678);
 }
 
@@ -149,6 +151,10 @@
 
     .Works label .card .text span {
         color: #060b2623;
+    }
+
+    .carosel{
+        display: none;
     }
 }
 

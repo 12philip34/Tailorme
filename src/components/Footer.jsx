@@ -6,6 +6,7 @@ import { useState, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Overlay from 'react-bootstrap/Overlay';
 import Tooltip from 'react-bootstrap/Tooltip';
+import * as FaIcons from 'react-icons/fa';
 
 const Footer = () => {
     const [show, setShow] = useState(false);
@@ -66,7 +67,7 @@ const Footer = () => {
                             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>
                                     <MDBIcon icon="gem" className="me-3" />
-                                    Company name
+                                    <span className='LogoSpan'><h3 className='logos'>C<FaIcons.FaEarlybirds />okies</h3></span>
                                 </h6>
                                 <p>
                                     So if you’re hungry for good food and great conversation with fellow cooks,
@@ -103,22 +104,22 @@ const Footer = () => {
                             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                                 <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <a rel='noopener noreferrer' href="https://www.facebook.com/Nssienphilip/" target="_blank" className='text-reset'>
                                         Facebook
                                     </a>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <a rel='noopener noreferrer' href="https://twitter.com/Nssienphilip" target="_blank" className='text-reset'>
                                         Twitter
                                     </a>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <a rel='noopener noreferrer' href="https://www.linkedin.com/in/philip-nssien/" className='text-reset'>
                                         LinkedIn
                                     </a>
                                 </p>
                                 <p>
-                                    <a href='#!' className='text-reset'>
+                                    <a rel='noopener noreferrer' href="https://github.com/12philip34" target="_blank" className='text-reset'>
                                         Github
                                     </a>
                                 </p>

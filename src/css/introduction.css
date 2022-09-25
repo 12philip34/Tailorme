@@ -89,3 +89,21 @@
     font-family: 'Shadows Into Light', cursive;
     font-size: 1.2em;
 }
+
+span {
+    margin-left: 16px;
+  }
+  
+  
+  .logos{
+    color: white;
+    text-transform: capitalize;
+  }
+  .LogoSpan{
+    padding-left: 20px;
+    display: flex;
+  }
+
+ p a:hover{
+    color: white;
+  }

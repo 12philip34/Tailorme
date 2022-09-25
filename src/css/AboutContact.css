@@ -1,0 +1,147 @@
+span {
+    margin-left: 16px;
+  }
+  
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+  
+  .logos{
+    color: #fff;
+    text-transform: capitalize;
+  }
+  .LogoSpan{
+    padding-left: 20px;
+    display: flex;
+  }
+
+  .aboutContainer{
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    justify-content: center;
+    align-items: center;
+  }
+
+  .BigText{
+    padding: 50px;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  h1{
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #060b26;
+    margin-right: 50px;
+  }
+
+  h1, h5{
+    font-family: 'Shadows Into Light', cursive;
+  }
+
+  h5{
+    font-size: 2em;
+    text-decoration: underline;
+    text-decoration-color: #060b26;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  .support{
+    display: grid;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background: #060b26;
+  }
+
+  .support a{
+    font-size: 3em;
+    text-decoration: none;
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+    transition: all 1s;
+  }
+
+  .support a:hover{
+    background: #fff;
+    color: #060b26;
+    padding: 10px;
+    font-weight: bolder;
+  }
+
+  .support .absolute{
+    padding: 20px;
+    position: relative;
+    border: 1px solid white;
+  }
+
+  .support .absolute i{
+    position: absolute;
+    bottom: -10px;
+    right: -20px;
+    color: #060b26;
+    background: #fff;
+    padding: 5px 10px;
+  }
+
+  .form-control{
+    margin: 30px;
+  }
+
+  .sendButton{
+    color: white;
+    background: #060b26;
+    font-size: 1.2em;
+    padding: 10px 30px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .aboutContainer{
+      padding: 50px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      justify-content: center;
+      align-items: center;
+    }
+
+    .BigText{
+      padding: 20px;
+    }
+
+    .form-control{
+      margin-left: 0;
+    }
+
+    input{
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1540px) and (max-width: 2000px) {
+    .aboutContainer{
+      padding: 50px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+      justify-content: center;
+      align-items: center;
+    }
+  
+  }
+
+  @media only screen and (min-width: 2000px) {
+    .aboutContainer{
+      padding: 50px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+      justify-content: center;
+      align-items: center;
+    }
+  
+  }

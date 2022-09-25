@@ -13,12 +13,15 @@ import { useState, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Overlay from 'react-bootstrap/Overlay';
 import Tooltip from 'react-bootstrap/Tooltip';
+import AOS from 'aos';
 
 
 function Home() {
   const [show, setShow] = useState(false);
   const target = useRef(null);
-  
+
+  AOS.init();
+
   return (
     <div className='home'>
       <Introduction />
@@ -26,11 +29,11 @@ function Home() {
 
       {/* About */}
       <section className="about">
-        <div className="aboutText">
+        <div data-aos="flip-left" className="aboutText">
           <h1>About</h1>
           <p>
             Cookies is an award-winning food and drink website visited by over
-            7 million hungry readers every month. Our audience comes to us for rigorously
+            7 million hungry faces every month. Our audience comes to us for rigorously
             tested recipes, science-driven cooking techniques, robust equipment reviews,
             and stories that offer cultural and historical context to the foods we love to eat.
           </p>
@@ -41,7 +44,7 @@ function Home() {
             a special-occasion feast or a casual, once-a-week cook who’s just looking for your next dinner.
           </p>
 
-          <div className="rating">
+          <div className="rating" data-aos="flip-right">
             <label>
               <span>41</span>
               <span>Proffesionals</span>
@@ -56,16 +59,16 @@ function Home() {
             </label>
           </div>
         </div>
-        <div className="aboutImage">
+        <div className="aboutImage" data-aos="flip-up">
           <img src={AboutImage} alt="AboutImage.png" />
         </div>
       </section>
       {/* delicious */}
       <section className="deliciousLooks">
-        <div className="looksImage">
+        <div className="looksImage" data-aos="flip-down">
           <img src={delicious} alt="delicious.png" />
         </div>
-        <div className="looksText">
+        <div className="looksText" data-aos="zoom-in-up">
           <h1>This looks Delicious</h1>
           <p>
             Search, watch, look and cook every single (coookies) you love to.
@@ -128,9 +131,11 @@ function Home() {
           </div>
         </label>
       </section>
-      <Carou />
+      <div className="carosel">
+        <Carou />
+      </div>
       <Footer />
-      
+
     </div>
   );
 }
