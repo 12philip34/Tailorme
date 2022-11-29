@@ -1,0 +1,107 @@
+.registerAsContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSection{
+    height: 100%;
+    padding-left: 10%;
+    padding-top: 5%;
+    background: #ffffff;
+}
+
+.leftSection img{
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.contentBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contentBox a:first-child{
+    margin: 30px 0;
+}
+
+.contentBox a:last-child{
+    margin: 30px 0;
+}
+
+.contentBox a{
+    width: 80%;
+    border: none;
+    background: #6B047C;
+    padding: 15px;
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    border-radius: 10px;
+}
+
+.checkBtn{
+    padding-right: 20px;
+}
+
+.contentBox h1{
+    padding: 20px 0;
+    color: #6B047C;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.rightSection{
+    height: 100%;
+    padding-left: 3%;
+    padding-top: 3%;
+    background-image: url("../../Images/Downloads/regisAs.png"), linear-gradient(rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.96));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contentTwo{
+    margin-top: 30%;
+}
+
+.contentTwo h1{
+    color: white;
+    font-weight: bold;
+}
+
+.contentTwo h3{
+    font-size: 15px;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .registerAsContainer{
+        width: 100%;
+        display: block;
+        background: #ffffff;
+    }
+
+    .rightSection{
+        display: none;
+    }
+
+    .leftSection{
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .contentBox a{
+        width: 100%;
+    }
+
+}

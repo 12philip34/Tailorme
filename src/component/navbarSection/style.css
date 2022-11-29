@@ -1,0 +1,87 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.LoginClass{
+    background: #6B047C;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 8px;
+    color: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid#6B047C;
+    text-decoration: none;
+}
+
+.LoginClass:hover{
+    color: #6B047C;
+    border: 1px solid #6B047C;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+
+.ulClass{
+    margin-left: 55%;
+}
+.navBox{
+    border-bottom: #6B047C;
+}
+
+.active{
+    color: #6B047C;
+}
+
+.navlink{
+    font-weight: bold;
+    color: #200520;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.navlink:hover{
+    padding-bottom: 5px;
+    color: #6B047C;
+    background: transparent;
+    box-shadow: 1px 20px 10px #e6dfe8;
+}
+
+@media only screen and (max-width: 991px) {
+    .smallScreenDesign{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .smallScreenDesign .ulClass{
+        float: left;
+        margin: 0;
+    }
+
+    .ulClass li a{
+        color: #6B047C;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background: #ffffff;
+
+    }
+
+    .ulClass li{
+        margin: 30px 0;
+    }
+
+}
+
+@media only screen and (max-width: 1500px){
+    .logoImage {
+        display: block;
+    }
+}

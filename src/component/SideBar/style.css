@@ -1,0 +1,69 @@
+.sideBarContainer{
+    background: #FDF5FF;
+    padding: 10px;
+    left: 0;
+    overflow-y: scroll;
+    height: 100vh !important;
+    z-index: 1000;
+}
+
+.backaccord{
+    background: #FDF5FF;
+}
+
+.accordionBtn{
+    border: none;
+    background: #FDF5FF;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.accordionBtn p{
+    margin: 0;
+}
+
+.product h4,
+.filter h4,
+.brand h4
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+label p{
+    font-size: 15px;
+    margin: 0;
+}
+
+.glass{
+    width: 0 !important;
+}
+
+.openBtn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: .1;
+}
+
+.closeBtn{
+    position: absolute;
+    left: 200px;
+}
+
+.openBtn,
+.closeBtn{
+    color: white;
+    background: #6B047C;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.sliderBox{
+    position: relative;
+}

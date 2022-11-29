@@ -1,0 +1,201 @@
+.registerAsContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSection{
+    height: 100%;
+    background: #ffffff;
+}
+
+.leftSectionInnerContainer{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.leftSection img{
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.inputBox label{
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #200520;
+}
+
+.contentBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contentBox input{
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #6B047C;
+    padding: 10px;
+}
+
+.contentBox .signinBtn{
+    width: 80%;
+    border: none;
+    background: #6B047C;
+    padding: 15px;
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contentBox .signinBtn:hover{
+    color: #200520;
+}
+
+.checkBtn{
+    padding-right: 20px;
+}
+
+.contentBox h1{
+    color: #6B047C;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contentBox h4{
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.contentBox h5{
+    text-align: center;
+    color: #200520;
+    font-size: 15px;
+    margin-right: 20%;
+    font-weight: 700;
+}
+
+.contentBox h5 a{
+    color: #6B047C;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ifPasswordIsAvaliable{
+    width: 100%;
+}
+
+
+
+.rightSection{
+    height: 100%;
+    padding-left: 3%;
+    padding-top: 3%;
+    background-image: url("../../Images/Downloads/signin.png"), linear-gradient(rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.96));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contentTwo{
+    margin-top: 30%;
+}
+
+.contentTwo h1{
+    color: white;
+    font-weight: bold;
+}
+
+.contentTwo h3{
+    font-size: 15px;
+    color: white;}
+
+.recaptcha{
+    position: absolute;
+    bottom: 200px;
+}
+
+.otpBox{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.otpBox input{
+    border-bottom: 1px solid #6B047C;
+    padding: 10px;
+    margin: 10px 0;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 1px;
+}
+
+.otpBox button{
+    border: none;
+    background: #6B047C;
+    padding: 15px;
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+    .registerAsContainer{
+        width: 100%;
+        display: block;
+        background: #ffffff;
+    }
+
+    .rightSection{
+        display: none;
+    }
+
+    .leftSection{
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .contentBox .inputBox input{
+        width: 100%;
+    }
+
+
+    .contentBox .signinBtn{
+        width: 100%;
+    }
+
+    .ifPasswordIsAvaliable h5{
+        margin: 10px 0;
+    }
+    .leftSectionInnerContainer{
+        margin: 0;
+    }
+}

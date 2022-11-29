@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh !important;
+}
+
+.left{
+flex: 1;
+    top: 0;
+    height: 100vh !important;
+    width: 320px;
+}
+
+.right{
+flex: 4;
+    top: 0;
+    overflow-y: scroll;
+    height: 100vh !important;
+
+}
+
+/*@media only screen and (max-width: 768px) {*/
+/*    .container{*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*        height: auto !important;*/
+/*        padding: 10px 0;*/
+
+/*    }*/
+
+/*    .left{*/
+/*        display: block;*/
+/*        width: 300px;*/
+/*        position: absolute;*/
+/*    }*/
+
+/*    .right{*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/

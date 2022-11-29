@@ -1,0 +1,87 @@
+.carouselBox{
+    background: #6B047C;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+
+.firstImage{
+    position: absolute;
+    bottom: 0;
+}
+
+.lastImage{
+    right: 0;
+    float: right;
+}
+.carouselItem{
+    bottom: 0;
+}
+
+.middleText{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.middleText h1{
+    color: white;
+    text-transform: capitalize;
+}
+
+.middleText p{
+    color: #c3c3c3;
+    margin: 20px 0;
+    text-transform: capitalize;
+
+}
+
+.middleText .button{
+    color: #6B047C;
+    background: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+    border: 1px solid #6B047C;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+}
+
+.middleText .button:hover{
+    color: white;
+    border: 1px solid whitesmoke;
+    background: #6B047C;
+}
+
+@media only screen and (max-width: 768px) {
+    .middleText{
+        top: 120px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .carouselBox{
+        height: 80vh;
+    }
+    .firstImage,
+    .lastImage
+    {
+        display: none;
+    }
+
+    .middleText{
+        width: 100%;
+    }
+
+    .middleText h1{
+        font-size: 24px;
+    }
+}
