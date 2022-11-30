@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ModalRender from "./ModalRender";
+import Executor from "./Executor";
+// import App from "./ModalRender"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <App />
-      {/*<ModalRender />*/}
-  </React.StrictMode>
+      {/*<Executor />*/}
+   </React.StrictMode>
 );
 

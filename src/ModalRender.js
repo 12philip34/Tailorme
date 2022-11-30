@@ -1,23 +1,24 @@
 import React, {useState} from 'react';
 import Modal from './Pages/Modal';
-import  './App.css'
+import './App.css';
 
-const ModalRender = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+const App = () => {
+    const [isModalOpen, setIsModalOpen] = useState(true);
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
+        console.log("is open")
     }
     return (
         <div className="App">
             <Modal isOpen={isModalOpen} toggleModal={toggleModal} closeOnOutsideClick={true}>
                 <div className="content">
-                    <h4>Your content here...</h4>
-                    <p>This is a dynamic modal!!</p>
+                    Your content here...
                 </div>
+                <button className="closeBtn" onClick={toggleModal}>ok</button>
             </Modal>
             <button className="button" onClick={toggleModal}>Open Modal</button>
         </div>
     );
 }
-export default ModalRender;
+export default App;

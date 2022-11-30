@@ -32,6 +32,10 @@
   transition: 1s;
 }
 
+.content{
+  position: relative;
+}
+
 
 .button{
   margin: 30px;
@@ -41,4 +45,21 @@
   border-right: 10px;
   background: #333;
   cursor: pointer;
+}
+
+.closeBtn{
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+  font-size: 30px;
+  border-radius: 50%;
+}
+
+.closeBtn:hover{
+  box-shadow: 5px 10px 20px #333333;
+}
+
+Modal{
+  z-index: 1000;
 }

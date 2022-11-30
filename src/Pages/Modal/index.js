@@ -1,7 +1,5 @@
-import  vReact, {useEffect, useRef} from 'react'
-import './style.css'
-
-
+import React, {useEffect, useRef} from 'react';
+import './style.css';
 const Modal = ({isOpen, toggleModal, closeOnOutsideClick, children}) => {
     const modalRef = useRef(null);
 
@@ -12,14 +10,14 @@ const Modal = ({isOpen, toggleModal, closeOnOutsideClick, children}) => {
             }
         }
         // Bind the event listener
-        document.addEventListener('mousedown', handleClickOutside);
-        return() => {
-            // Unbind the event listener
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, [modalRef, closeOnOutsideClick, toggleModal])
+        // document.addEventListener('mousedown', handleClickOutside);
+        // return() => {
+        //     // Unbind the event listener
+        //     document.removeEventListener('mousedown', handleClickOutside);
+        // };
+    }, [modalRef, closeOnOutsideClick, toggleModal]);
     return (
-        <div className="modal" style={isOpen ? {display: 'none'} : null}>
+        <div className="modal" style={!isOpen ? {display: 'none'} : null}>
             <div className="modal__wrapper" ref={modalRef}>
                 {children}
             </div>

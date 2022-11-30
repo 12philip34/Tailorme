@@ -1,0 +1,10 @@
+.modalContent{
+    padding: 30px;
+    background: #333333;
+}
+
+.modalContent h5{
+    color: red;
+    font-size: 20px;
+    padding: 10px;
+}
