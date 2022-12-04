@@ -23,15 +23,14 @@ const RegisterAs = () => {
                             </div>
 
                             </a>
-                        <a>
+                        <a href="/signin">
                             <div className="form-check" id={style.checkBtn}>
                                 <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                       value="option2" />
+                                       value="option2" checked />
                                     <label className="form-check-label" htmlFor="exampleRadios2">
                                         customer
                                     </label>
                             </div>
-
                         </a>
                     </div>
                 </div>

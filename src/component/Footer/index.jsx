@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './style.module.css'
 import Logo from '../../Images/Downloads/footer.png'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 const FooterContainer = () => {
 
@@ -35,8 +35,7 @@ const FooterContainer = () => {
                     <span>github</span>
                 </div>
                 <div className={style.gridFour}>
-                    <h3>lets make what suit your personality</h3>
-                    <button className={style.footerBtn}>get started <ArrowForwardIcon /></button>
+                    <a href="/registeras" className={style.footerBtn}>get started <ArrowForwardIcon /></a>
                 </div>
             </div>
         </div>

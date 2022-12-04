@@ -1,10 +1,21 @@
 .modalContent{
     padding: 30px;
-    background: #333333;
+    background: #333;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.modalContent h5{
-    color: red;
+.modalContent h6{
+    color: white;
     font-size: 20px;
     padding: 10px;
+    z-index: 10;
 }

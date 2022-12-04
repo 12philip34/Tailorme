@@ -21,7 +21,7 @@ const CongratsPage = () => {
                        <h1>Congratulations</h1>
                        <h3>Welcome{auth.currentUser.phoneNumber} ||{UserId}</h3>
                        <h4>{auth.curr} Your account setup was successful</h4>
-                       <a href="/">Proceed to Dashboard</a>
+                       <a href="/dashboard">Proceed to Dashboard</a>
                    </div>
                 </div>
                 <div className={style.rightSection}>

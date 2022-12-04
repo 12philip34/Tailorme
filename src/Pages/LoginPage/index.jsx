@@ -1,11 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
+import 'bootstrap'
+import 'react-bootstrap'
 import style from './style.module.css'
 import Logo from '../../Images/Downloads/logo.png'
 import LogoTwo from '../../Images/Downloads/footer.png'
 
-
 const LoginPage = () => {
+    const [modalIsOpen, setIsOpen] = useState(false);
 
+    const openModal = ({ isOpen }) => {
+        setIsOpen(true);
+    }
+
+    // const closeModal = () => {
+    //     setIsOpen(false);
+    // }
     return (
         <div>
             <div className={style.registerAsContainer}>
@@ -18,14 +27,30 @@ const LoginPage = () => {
                            <label htmlFor="number">Phone Number</label>
                            <input type="text" id="number" placeholder="type here"/>
                        </div>
-                       <div className={style.inputBox}>
+                       <div className={style.inputBox} style={{position: 'relative'}}>
                            <label htmlFor="password">Password</label>
                            <input type="password" id="password" placeholder="........."/>
-                           <a className={style.forgotPassword} href="#forgotpassword">Forgot password?</a>
+                           <a className={style.forgotPassword} href="#sss" onClick={openModal}>Forgot password?</a>
                        </div>
-                       <a className={style.loginBtn} href="/">Login</a>
+                       <a className={style.loginBtn} href="/dashboard">Login</a>
                        <h5>Do not have an account? <a href="/signin">Sign up</a></h5>
                    </div>
+                    <div className={style.modalContainer} isOpen={modalIsOpen}>
+                    <div className={style.modalContent}>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, vitae?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, vitae?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, vitae?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, vitae?
+                        </p>
+                    </div>
+                </div>
                 </div>
                 <div className={style.rightSection}>
                     <img src={LogoTwo} alt="logotwo.png"/>
@@ -43,3 +68,4 @@ const LoginPage = () => {
     )
 }
 export default LoginPage;
+

@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { firebase, auth } from "../../FirebasePh"
 import style from './style.module.css'
 import Logo from '../../Images/Downloads/logo.png'
 import LogoTwo from '../../Images/Downloads/footer.png'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import DynaModal from '../../component/DynaModal'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SigninPage = () => {
 
@@ -16,15 +19,51 @@ const SigninPage = () => {
     const [final, setfinal] = useState(null);
     const navigate = useNavigate();
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const toggleModal = (e) => {
+        setIsModalOpen(!isModalOpen);
+        console.log("isOpen")
+    }
+
+    // const ToggleModalFt = () => {
+    //     useEffect(() => {
+    //        setTimeout(toggleModal(), 2000)
+    //     }, [])
+    // }
+    const Success = () => {
+        toast.success("Code Sent!", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+    const Failure = () => {
+        toast.error("Wrong Code!", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+
     // Sent OTP
     const signin = () => {
 
         if (mynumber === "" || mynumber.length < 10) return;
 
+
         let verify = new firebase.auth.RecaptchaVerifier('recaptcha-container');
         auth.signInWithPhoneNumber(mynumber, verify).then((result) => {
+            Success();
             setfinal(result);
-            alert("code sent")
             setshow(true);
         })
             .catch((err) => {
@@ -32,6 +71,8 @@ const SigninPage = () => {
                 window.location.reload()
             });
     }
+
+
 
     // Validate OTP
     const ValidateOtp = () => {
@@ -43,7 +84,7 @@ const SigninPage = () => {
             navigate("/congratsBox")
         })
             .catch((err) => {
-                alert("Wrong code");
+                Failure()
             })
 
     }
@@ -52,42 +93,50 @@ const SigninPage = () => {
         <div>
             <div className={style.registerAsContainer}>
                 <div className={style.leftSection}>
-                   <div className={style.leftSectionInnerContainer}>
-                       <img src={Logo} alt="logo.png"/>
-                       <div className={style.contentBox}>
-                           <a href="/registeras"> <ArrowBackIcon /></a>
-                           <h4>Get started for free</h4>
-                           <h1>Create account</h1>
-                           <div className={style.inputBox}>
-                               <label htmlFor="name">name</label>
-                               <input type="text" id="name" placeholder="First and LastName"/>
-                           </div>
-                           <div className={style.inputBox}>
-                               <label htmlFor="number">number</label>
-                               <input value={mynumber} onChange={(e) => {
-                                   setnumber(e.target.value) }} id="number" placeholder="(+234)"/>
-                           </div>
+                    <div className={style.leftSectionInnerContainer}>
+                        <img src={Logo} alt="logo.png" />
+                        <div className={style.contentBox}>
+                            <a href="/registeras"> <ArrowBackIcon /></a>
 
-                           <div className={style.inputBox}>
-                               <label htmlFor="password">password</label>
-                               <input type="password" id="password" placeholder="..........."/>
-                           </div>
-                           <div id="recaptcha-container" className={style.recaptcha}></div>
-                           <button className={style.signinBtn} onClick={signin}>Create your account</button>
-                           <div style={{ display: show ? "block" : "none" }} className={style.otpBox}>
-                               <input type="text" placeholder={"Enter your OTP"}
-                                      onChange={(e) => { setotp(e.target.value.trim()) }}></input>
+                            <DynaModal
+                                modalText="good morning guys"
+                                isOpen={isModalOpen}
+                                toggleModal={toggleModal}
+                            />
+                            <h4>Get started for free</h4>
+                            <h1>Create account</h1>
+                            <div className={style.inputBox}>
+                                <label htmlFor="name">name</label>
+                                <input type="text" id="name" placeholder="First and LastName" />
+                            </div>
+                            <div className={style.inputBox}>
+                                <label htmlFor="number">number</label>
+                                <input value={mynumber} onChange={(e) => {
+                                    setnumber(e.target.value)
+                                }} id="number" placeholder="(+234)" />
+                            </div>
 
-                               <button onClick={ValidateOtp}>Verify</button>
-                           </div>
-                           <div className={style.ifPasswordIsAvaliable}>
-                               <h5>Already have an account? <a href="/login">Login</a></h5>
-                           </div>
-                       </div>
-                   </div>
+                            <div className={style.inputBox}>
+                                <label htmlFor="password">password</label>
+                                <input type="password" id="password" placeholder="..........." />
+                            </div>
+                            <div id="recaptcha-container" className={style.recaptcha}></div>
+                            <button className={style.signinBtn} onClick={signin}>Create your account</button>
+                            <div style={{ display: show ? "block" : "none" }} className={style.otpBox}>
+                                <input type="text" placeholder={"Enter your OTP"}
+                                    onChange={(e) => { setotp(e.target.value.trim()) }}></input>
+
+                                <button onClick={ValidateOtp}>Verify</button>
+                                <ToastContainer />
+                            </div>
+                            <div className={style.ifPasswordIsAvaliable}>
+                                <h5>Already have an account? <a href="/login">Login</a></h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className={style.rightSection}>
-                    <img src={LogoTwo} alt="LogoTwo.png"/>
+                    <img src={LogoTwo} alt="LogoTwo.png" />
                     <div className={style.contentTwo}>
                         <h1>
                             Get a material and a

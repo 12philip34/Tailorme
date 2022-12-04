@@ -1,20 +1,19 @@
 import React from 'react'
-import style from './style.module.css'
+import NavbarDashBoard from "../../component/DashBoardNavBar";
 import Slider from "../../component/Slider";
 import GridContainer from "../../component/GridContainer";
 import FooterContainer from "../../component/Footer";
-import NavbarSection from "../../component/navbarSection";
+import RenderItems from "../../component/RenderItems";
 
-const HomePage = () => {
+const DashBoardPage = () => {
 
     return (
         <div>
-            <NavbarSection />
-            <Slider />
-            <GridContainer />
+            <NavbarDashBoard />
+           <RenderItems />
             <FooterContainer />
         </div>
     )
 }
 
-export default HomePage;
+export default DashBoardPage;

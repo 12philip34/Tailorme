@@ -59,7 +59,6 @@
 .closeBtn:hover{
   box-shadow: 5px 10px 20px #333333;
 }
-
-Modal{
-  z-index: 1000;
+button{
+  border: none;
 }

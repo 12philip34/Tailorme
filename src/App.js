@@ -11,29 +11,12 @@ import SigninPage from "./Pages/SignIn"
 import CongratsPage from "./Pages/SignInCongrats"
 import LoginCongratsPage from "./Pages/LoginCongrats"
 import LoginPage from "./Pages/LoginPage"
-import DynaModal from "./component/DynaModal";
-import Modal from "./Pages/Modal"
+import DashBoardPage from "./Pages/DashBoardPage";
 
-const App = () => {
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const toggleModal = (e) => {
-        e.preventDefault();
-        setIsModalOpen(!isModalOpen);
-    }
-
+const App = (props) => {
     return (
     <div>
         <BrowserRouter>
-            <NavbarSection />
-            <DynaModal
-            text="Code sent"
-            // isOpen={isModalOpen}
-            // toggleModal={toggleModal}
-            />
-            <button className="button" onClick={toggleModal}>Open Modal</button>
-            {/*<Modal isOpen={isModalOpen} toggleModal={toggleModal} closeOnOutsideClick={true} />*/}
             <Routes>
                 <Route path="/" element={<HomePage />}/>
                 <Route path="/registeras" element={<RegisterAs/>}/>
@@ -44,6 +27,7 @@ const App = () => {
                 <Route path="/about" element={<AboutPage/>}/>
                 <Route path="/contact" element={<ContactPage/>}/>
                 <Route path="/reset" element={<Reset/>}/>
+                <Route path="/dashboard" element={<DashBoardPage />}/>
             </Routes>
         </BrowserRouter>
     </div>

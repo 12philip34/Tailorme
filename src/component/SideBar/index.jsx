@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import './style.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import SlidingPanel from 'react-sliding-side-panel';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import SlidingPanel from 'react-sliding-side-panel'
+import MenuIcon from '@mui/icons-material/Menu'
 
 const SideBar = () => {
     const [openPanel, setOpenPanel] = useState(false);
     const toggle = () => setOpenPanel(!openPanel);
     const sideBtn = {
-        position: 'absolute'
+        // position: 'absolute'
+        color: 'white',
+        cursor: 'pointer'
     }
     return (
         <div className='sliderBox'>
-            <div>
-                <ArrowForwardIcon onClick={toggle} style={sideBtn} />
+            <div className="sideButton">
+                <MenuIcon onClick={toggle} style={sideBtn} />
             </div>
-            <div className="sideBarContainer" style={{width: openPanel ? "320px" : "50px"}}>
+            <div className="sideBarContainer" style={{width: openPanel ? "320px" : "0px"}}>
                     <div>
                         <div className="product" style={{display: openPanel ? "block" : "none"}}>
                             <h4>New Products</h4>
